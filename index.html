@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>This site bakes a cookie</title>
+    <h1>Basic cookie maker</h1>
+</head>
+
+
+<script>
+    
+    function bake(){
+        document.cookie = prompt("Enter something");
+    }
+    
+    function display(){
+        document.getElementById("text").innerHTML = "Cookie: " + document.cookie;
+    }
+    
+</script>
+
+<body onload="bake()">
+    <button type="button" onclick="bake()">Change the cookie</button>
+    <button type="button" onclick="display()">Display Cookie</button>
+    <p id="text">Cookie: </p>
+</body>
